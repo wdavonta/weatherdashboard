@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link
+      rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1 w-100 text-center">Weather Dashboard</span>
+    </nav>
+
+    <div class= "container">
+        <div class="col-12 col-md-4">
+            <div class="card">
+              <h3 class="card-header text-uppercase">Search for a City:</h3>
+              <form id="user-form" class="card-body">
+                <input name="username" id="username" type="text" autofocus="true" class="form-input" />
+                <button type="submit" class="fa fa-search"></button>
+                <button class="btn btn-primary mb-3" type="button" id="clear-history">Clear history</button>
+                <form id="history"></form>
+              </form>
+            </div>
+            </div>
+      </div>
+    
+      <div class="row">
+        <div class="col-12">
+      <p>Temperature</p>
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12"></div>
+      <p>Humidity</p>
+    </div>
+</div>
+
+
+      <div class="row">
+        <div class="col-12">
+      <p>Wind Speed</p>
+      </div>
+    </div>
+
+      <div class="row">
+      <div class="col-12">
+     <p> Uv Index </p>
+      </div>
+    </div>
+
+
+    
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <h3>5-Day Forecast</h3>
+    </div>
+</div>
+
+</body>
+
+<script src="./assets/js/script.js"></script>
+</html>
