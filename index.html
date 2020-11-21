@@ -21,41 +21,59 @@
     </nav>
 
     <div class= "container">
-        <div class="col-12 col-md-4">
-            <div class="card">
-              <h3 class="card-header text-uppercase">Search for a City:</h3>
-              <form id="user-form" class="card-body">
-                <input name="username" id="username" type="text" autofocus="true" class="form-input" />
-                <button type="submit" class="fa fa-search"></button>
-                <button class="btn btn-primary mb-3" type="button" id="clear-history">Clear history</button>
-                <form id="history"></form>
-              </form>
+        <div class="row">
+        <div class= "col-md-4 bg-light">
+           <p class="search-header my-3">Search for a City:</p>
+              <div class="input-group mb-1">
+                <input id="cityInput" type="text" autofocus="true" class="form-control" placeholder="Enter City Name" aria-label="Enter City Name">
+                <div class="input-group-append">
+                <button type="button" class="btn btn-primary" id="search-button">
+                <i class="fa fa-search"></i>
+                </button>
             </div>
+        </div>
+
+
+
+                <!-- <button class="btn btn-primary mb-3" type="button" id="clear-history">Clear history</button>
+                <form id="history"></form> -->
             </div>
-      </div>
     
-      <div class="row">
+
+
+
+    <div class="col-8">
+         <div class="row mr-0">
+            <div class="col-12 border border-dark m-3 square">
+                 <div class="row">
+                     <div class="col-12">
+                     <span id="city-name" class="city-name align-middle"></span>
+                    <img id="current-pic" src="placeholder" alt="">
+                            </div>
+                        </div>
+
+    <div class="row">
         <div class="col-12">
-      <p>Temperature</p>
-    </div>
+        <p>Temperature</p>
+        </div>
     </div>
 
     <div class="row">
-        <div class="col-12"></div>
-      <p>Humidity</p>
-    </div>
-</div>
-
-
-      <div class="row">
         <div class="col-12">
-      <p>Wind Speed</p>
-      </div>
+        <p>Humidity</p>
+        </div>
     </div>
 
-      <div class="row">
+
+    <div class="row">
+        <div class="col-12">
+        <p>Wind Speed</p>
+         </div>
+    </div>
+
+    <div class="row">
       <div class="col-12">
-     <p> Uv Index </p>
+     <p>UV Index </p>
       </div>
     </div>
 
@@ -66,10 +84,18 @@
 <div class="row">
     <div class="col-12">
         <h3>5-Day Forecast</h3>
+        <div id="response-container"></div>
     </div>
+</div>
+<div class="row">
+    <div class="col forecast bg-primary text-white ml-3 mb-3 square"></div>
+    <div class="col forecast bg-primary text-white ml-3 mb-3 square"></div>
+    <div class="col forecast bg-primary text-white ml-3 mb-3 square"></div>
+    <div class="col forecast bg-primary text-white ml-3 mb-3 square"></div>
+    <div class="col forecast bg-primary text-white ml-3 mb-3 square"></div>
 </div>
 
 </body>
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="./assets/js/script.js"></script>
 </html>
