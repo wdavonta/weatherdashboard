@@ -1,0 +1,18 @@
+.navbar-brand {
+    font-size:40px;
+    font-family:"Lucida Console", Courier, monospace;
+    font-weight:bold;
+    
+}
+
+
+.search-header {
+    font-weight: bold;
+    font-size:24px;
+}
+
+
+.city-name {
+    font-weight: bold;
+    font-size:45px;
+}
