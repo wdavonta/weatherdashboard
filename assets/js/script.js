@@ -39,12 +39,10 @@ function getWeather(cityName) {
                 currentSpeedEl.innerHTML = "Wind Speed:" + response.data.wind.speed + " MPH";
             let lat = response.data.coord.lat;
             let lon = response.data.coord.lon;
-            let UvURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&cnt=1";
+            let UvURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&cnt=" + 5;
             axios.get(UvURL)
             .then(function(response){
-                let UVIndex = document.createElement("span");
-                // red banner over number 
-                UVIndex.setAttribute("class","badge badge-danger");
+                let UVIndex = document.createElement("span"); 
                 UVIndex.innerHTML = response.data[0].value;
                 currentUvEl.innerHTML = "UV-index:";
                 currentUvEl.append(UVIndex);
