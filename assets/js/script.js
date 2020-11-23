@@ -39,13 +39,24 @@ function getWeather(cityName) {
                 currentSpeedEl.innerHTML = "Wind Speed:" + response.data.wind.speed + " MPH";
             let lat = response.data.coord.lat;
             let lon = response.data.coord.lon;
-            let UvURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&cnt=" + 5;
+            let UvURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&cnt=1";
             axios.get(UvURL)
             .then(function(response){
+
                 let UVIndex = document.createElement("span"); 
                 UVIndex.innerHTML = response.data[0].value;
                 currentUvEl.innerHTML = "UV-index:";
                 currentUvEl.append(UVIndex);
+                if(response.value > 0 && response.value <=4){
+                    currentUvEl.setAttribute("class","green");
+                }
+                else if (response.value > 2 && response.value <= 5){
+                    currentUvEl.setAttribute("class","yellow");
+                }
+                if(response.value > 8 && response.value <=10){
+                    currentUvEl.setAttribute("class","red");
+                }
+            
             });
     // 5Day forecast
             let cityID = response.data.id;
